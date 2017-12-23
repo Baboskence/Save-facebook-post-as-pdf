@@ -1,0 +1,21 @@
+{
+	"name": "Facebook post to pdf",
+	"version": "1",
+	"manifest_version": 2,
+	"description": "Save facebook post as pdf within comments",
+	"developer": {"name":"Bence Bakos","url":""},
+	"icons": {"64": "download.png"},
+	"permissions": [
+        "tabs",
+		"contextMenus",
+		"activeTab"
+     ],
+	"content_scripts": [
+	{
+      "matches": ["*://www.facebook.com/*"],
+      "js": ["contentScript.js"]
+    }],
+    "background": {
+        "scripts": ["background.js"]
+    }
+}
